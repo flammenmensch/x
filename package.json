@@ -1,0 +1,22 @@
+{
+  "name": "x.qiwi.com",
+  "version": "1.0.0",
+  "description": "X",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Flammenmensch <maleventum@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-compress": "^0.9.1",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-rev": "^0.1.0",
+    "grunt-usemin": "^2.2.0"
+  }
+}
