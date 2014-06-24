@@ -46,7 +46,7 @@ module.exports = function (grunt) {
 						'scripts/app.js'
 					],
 					'dist/scripts/libraries.min.js': [
-						'bower_components/glitch-canvas.min.js',
+						'bower_components/glitch-canvas/dist/glitch-canvas.min.js',
 						'bower_components/moment/min/moment.min.js',
 						'bower_components/angular/angular.min.js'
 					]
