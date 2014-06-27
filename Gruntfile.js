@@ -103,5 +103,5 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-rev');
 
 	grunt.registerTask('validate', [ 'jshint' ]);
-	grunt.registerTask('default', [ 'clean', 'cssmin', 'uglify', 'copy', 'rev', 'usemin' ]);
+	grunt.registerTask('build', [ 'validate', 'clean', 'cssmin', 'uglify', 'copy', 'rev', 'usemin', 'compress' ]);
 };
