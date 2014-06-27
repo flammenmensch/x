@@ -57,7 +57,7 @@
 			return {
 				restrict: 'A',
 				compile: function (element) {
-					if (!mobile.any()) {
+					if (mobile.any()) {
                         element.remove();
 
                         return;
