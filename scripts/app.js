@@ -12,6 +12,29 @@
 			return $window.glitch;
 		} ])
 
+        .factory('xqMobile', [ '$window', function ($window) {
+            return {
+                Android: function() {
+                    return $window.navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function() {
+                    return $window.navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function() {
+                    return $window.navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                },
+                Opera: function() {
+                    return $window.navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function() {
+                    return $window.navigator.userAgent.match(/IEMobile/i);
+                },
+                any: function() {
+                    return (this.Android() || this.BlackBerry() || this.iOS() || this.Opera() || this.Windows());
+                }
+            };
+        } ])
+
 		.service('xqUtil', function () {
 			this.pad = function (s, n) {
 				if (n === undefined) {
@@ -30,13 +53,19 @@
 			};
 		})
 
-		.directive('xqVideoGlitch', [ '$window', '$timeout', 'xqGlitchCanvas', 'xqUtil', function ($window, $timeout, glitch, util) {
+		.directive('xqVideoGlitch', [ '$window', '$timeout', 'xqGlitchCanvas', 'xqUtil', 'xqMobile', function ($window, $timeout, glitch, util, mobile) {
 			return {
 				restrict: 'A',
 				compile: function (element) {
-					var originalVideo = element[0];
+					if (!mobile.any()) {
+                        element.remove();
 
-					var canvas = $window.document.createElement('canvas');
+                        return;
+                    }
+
+                    var originalVideo = element[0];
+
+                    var canvas = $window.document.createElement('canvas');
 
 					element.replaceWith(canvas);
 
