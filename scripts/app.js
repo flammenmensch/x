@@ -185,7 +185,7 @@
 					return function (scope, element) {
 						var update = function () {
 							var now = moment();
-							var then = moment(scope.date, 'DD/MM/YYYY');
+							var then = moment(scope.date, 'DD/MM/YYYY HH:mm:ss');
 							var ms = then.diff(now, 'milliseconds', true);
 							var days = Math.floor(moment.duration(ms).asDays());
 							then = then.subtract('days', days);

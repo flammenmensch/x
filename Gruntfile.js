@@ -21,7 +21,10 @@ module.exports = function (grunt) {
 					{
 						expand: true,
 						src: [
+							'favicon.ico',
 							'index.html',
+							'assets/video_background.jpeg',
+							'assets/x_timeline.jpg',
 							'assets/clouds.mp4',
 							'assets/x_logo.png',
 							'assets/clouds.webm',
@@ -103,5 +106,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-rev');
 
 	grunt.registerTask('validate', [ 'jshint' ]);
-	grunt.registerTask('build', [ 'validate', 'clean', 'cssmin', 'uglify', 'copy', 'rev', 'usemin', 'compress' ]);
+	grunt.registerTask('build', [ 'validate', 'clean', 'cssmin', 'uglify', 'copy', 'rev', 'usemin' ]);
+	grunt.registerTask('release', [ 'build', 'compress' ]);
 };
