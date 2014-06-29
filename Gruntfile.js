@@ -28,6 +28,7 @@ module.exports = function (grunt) {
 							'assets/clouds.mp4',
 							'assets/x_logo.png',
 							'assets/clouds.webm',
+							'assets/X.swf'
 						],
 						dest: 'dist/'
 					}

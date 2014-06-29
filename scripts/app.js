@@ -91,7 +91,6 @@
 									context.putImageData(imageData, 0, 0);
 								});
 
-								//$timeout(draw, 100);
 								$timeout(function () {
 									$window.requestAnimationFrame(draw, element);
 								}, 100);
@@ -99,11 +98,9 @@
 						};
 
 						if (!originalVideo.paused) {
-							//draw();
 							$window.requestAnimationFrame(draw, element);
 						} else {
 							originalVideo.addEventListener('play', function () {
-								//draw();
 								$window.requestAnimationFrame(draw, element);
 							});
 

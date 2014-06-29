@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html lang="en-US" xmlns:og="http://ogp.me/ns#">
-<head>
+<html lang="en-US">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# video: http://ogp.me/ns/video#">
     <meta charset="UTF-8">
     <meta name="title" content="X">
     <meta name="description" content="██████████████">
     <meta name="viewport" content="minimal-ui">
     <!-- Facebook -->
+    <meta property="fb:app_id" content="250513585138727">
+    <meta property="fb:admins" content="702524723">
+    <!-- Open Graph -->
     <meta property="og:title" content="X">
+    <meta property="og:type" content="video">
     <meta property="og:site_name" content="X">
-    <meta property="og:url" content="http://flammenmensch.dyndns.org:9080/x/">
+    <meta property="og:url" content="http://flammenmensch.dyndns.org:9080/x">
     <meta property="og:description" content="██████████████">
     <meta property="og:image" content="http://flammenmensch.dyndns.org:9080/x/assets/x_timeline.jpg">
+    <meta property="og:video" content="http://flammenmensch.dyndns.org:9080/x/assets/X.swf">
+    <meta property="og:video:width" content="640">
+    <meta property="og:video:height" content="360">
+    <meta property="og:video:type" content="application/x-shockwave-flash">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:site" content="x.qiwi.com">
     <meta property="twitter:title" content="X">
     <meta property="twitter:description" content="██████████████">
     <meta property="twitter:image:src" content="http://flammenmensch.dyndns.org:9080/x/assets/x_timeline.jpg">
-    <meta property="twitter:url" content="http://flammenmensch.dyndns.org:9080/x/">
+    <meta property="twitter:url" content="http://flammenmensch.dyndns.org:9080/x">
     <title>X</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- build:css styles/style.min.css -->
     <link rel="stylesheet" href="styles/style.css">
     <!-- endbuild -->
-    <script type="text/javascript">var switchTo5x=true;</script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
 </head>
 <body ng-app="xq">
 
@@ -43,6 +48,8 @@
 
 <xq-countdown class="countdown" date="11/07/2014 11:00:00"></xq-countdown>
 
+<div class="pluso" data-background="transparent" data-options="medium,round,line,vertical,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir"></div>
+
 <!-- build:js scripts/libraries.min.js -->
 <script type="text/javascript" src="bower_components/glitch-canvas/src/glitch-canvas.js"></script>
 <script type="text/javascript" src="bower_components/moment/moment.js"></script>
@@ -51,10 +58,16 @@
 <!-- build:js scripts/app.min.js -->
 <script type="text/javascript" src="scripts/app.js"></script>
 <!-- endbuild -->
-<script type="text/javascript">stLight.options({publisher: "95b494c3-1cd4-40f5-b931-1e53e8cab378", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-<script>
-    var options={ "publisher": "95b494c3-1cd4-40f5-b931-1e53e8cab378", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "googleplus", "vkontakte", "odnoklassniki"]}};
-    var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+<!-- Pluso -->
+<script type="text/javascript">(function() {
+    if (window.pluso)if (typeof window.pluso.start == "function") return;
+    if (window.ifpluso==undefined) { window.ifpluso = 1;
+        var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+        s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+        s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+        var h=d[g]('body')[0];
+        h.appendChild(s);
+    }})();
 </script>
 <!-- Google Analytics -->
 <script>
