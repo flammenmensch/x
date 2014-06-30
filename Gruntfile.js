@@ -23,12 +23,7 @@ module.exports = function (grunt) {
 						src: [
 							'favicon.ico',
 							'index.html',
-							'assets/video_background.jpeg',
-							'assets/x_timeline.jpg',
-							'assets/clouds.mp4',
-							'assets/x_logo.png',
-							'assets/clouds.webm',
-							'assets/X.swf'
+							'assets/**',
 						],
 						dest: 'dist/'
 					}
