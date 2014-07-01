@@ -37,11 +37,9 @@
 <body ng-app="xq">
 
 <div class="x-video-container">
-    <img src="assets/sunduk.jpg" alt="Chest" xq-glitch>
-</div>
-
-<div class="x-logo-container">
-    <img src="assets/x_logo.png" alt="X" xq-glitch>
+    <video autoplay loop muted xq-video-glitch>
+        <source src="assets/hktn3.mp4" type="video/mp4">
+    </video>
 </div>
 
 <xq-countdown class="countdown" date="11/07/2014 11:00:00"></xq-countdown>
@@ -54,16 +52,5 @@
 <!-- build:js scripts/app.min.js -->
 <script type="text/javascript" src="scripts/app.js"></script>
 <!-- endbuild -->
-<!-- Google Analytics -->
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-XXXX-Y', 'auto');
-    ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
 </body>
 </html>
