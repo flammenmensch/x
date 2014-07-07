@@ -1,3 +1,7 @@
+body {
+    font-family: "Courier New", monospace;
+}
+
 .x-video-container {
     position: fixed;
     right: 0;
@@ -32,7 +36,6 @@
 }
 
 .countdown {
-    font-family: "Courier New", monospace;
     font-size: 36px;
     color: #fff;
     padding: 10px 0px 10px 20px;
@@ -47,4 +50,26 @@
     left: 50%;
     width: 360px;
     margin: 0 0 0 -180px;
+}
+
+.x-link {
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 20px 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    font-size: 24px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    text-align: center;
+    margin-left: -140px;
+}
+
+.x-link:hover,
+.x-link:active {
+    color: #fff;
 }
